@@ -4,7 +4,7 @@ export const NEW_INFO = 'NEW_INFO';
 
 export function fetchedProfile(searched){
     return(dispatch)=>{
-    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token 66e5da558b341e034174bb340f5e905090c70b87" })
+    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token " })
         return fetch(`https://api.github.com/users/${searched}`,{
             method: 'GET',
             headers: headerx
@@ -22,7 +22,7 @@ export function fetchedProfile(searched){
 
 export function saveProfile(profile){
     return(dispatch)=>{
-    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token 66e5da558b341e034174bb340f5e905090c70b87" })
+    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token " })
         return fetch(`https://api.github.com/user`,{
             method: 'PATCH',
             headers: headerx,
@@ -41,7 +41,7 @@ export function fetchedRepo(searched){
      let repos_count = 5;
     let repos_sort = 'created: asc';
     return(dispatch)=>{
-    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token 66e5da558b341e034174bb340f5e905090c70b87" })
+    let headerx = new Headers({"Content-Type":"Application/json", "Authorization":"token " })
         return fetch(`https://api.github.com/users/${searched}/repos?per_page=${repos_count}&sort=${repos_sort}`,{
             method: 'GET',
             headers: headerx
