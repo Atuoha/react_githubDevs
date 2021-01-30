@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.red-border{
+  border: red thin solid;
+}
+
+
+.red-border{
+ border: 1px solid red;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
